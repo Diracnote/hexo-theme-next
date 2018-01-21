@@ -91,6 +91,9 @@
 {% if theme.favicon.small %}
   <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for(theme.favicon.small) }}?v={{ theme.version }}">
 {% endif %}
+{% if theme.favicon.default %}
+  <link rel="icon" type="image/png" href="{{ url_for(theme.favicon.default) }}?v={{ theme.version }}">
+{% endif %}
 {% if theme.favicon.safari_pinned_tab %}
   <link rel="mask-icon" href="{{ url_for(theme.favicon.safari_pinned_tab) }}?v={{ theme.version }}" color="{{ theme.android_chrome_color }}">
 {% endif %}
